@@ -1,0 +1,112 @@
+﻿<div id="DetailTemplate" >   
+    <div id="container">
+        <div id="header">
+            <h1 id="title">
+                </h1>
+            <h2 id="tagline">
+                </h2>
+        </div>
+        <div id="left">
+           <div id="TemplateItemHolder" />
+			            
+        <div id="CommentForm">
+            <h3>Comments</h3>  
+          <div id="CommentHolder" />
+            <div id="CommentFormHolder" />
+        
+          <div id="alertbox" ></div>
+        </div>
+				
+				
+			</div>
+        <div id="right">
+            <div class="rightpanel">
+               
+                <h3>
+                    About
+                </h3>
+                <div id="about"/>
+            </div>
+            <div class="rightpanel">
+            <h3>Latest Channel Items</h3>
+                    <div id="ChannelItems" />
+            </div>
+            <div class="rightpanel">
+                <a href="Feed.aspx">
+                    <img style="border:0px" src="themes/interzone/img/rss_drop.png" />
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+    
+<div id="ItemTemplates">
+    <div class="ItemTemplate Digg GoogleReader Upcoming Tumblr" >
+        <div class="post">
+            <h3>
+                <img src="/{{user.username}}/Assets/img/icons/24/${SourceTypeName}.png" /><span id="itemtitle">${Title}</span>
+            </h3>
+            <h4>Posted to <a href="${SourceLink}">${SourceTitle}</a> on ${PublishDate}</h4>
+            ${Description}
+            <div class="postfooter">
+            Permalink: <a href="${SourceLink}">${SourceLink}</a>
+        </div>  
+        </div>  
+    </div>
+        <div class="ItemTemplate Microblog" >
+        <div class="post">
+            <h3>
+                <img src="/{{user.username}}/Assets/img/icons/24/${SourceTypeName}.png" /><span id="itemtitle">${Title}</span>
+            </h3>
+            <h4>Posted to ${SourceTitle} on ${PublishDate}</h4>
+            ${Description}
+            <div class="postfooter">
+            
+        </div>  
+        </div>  
+    </div>
+    <div class="ItemTemplate Twitter Delicious Stumbleupon Reddit Facebook Mixx Brightkite" >
+        <div class="post">
+            <h3>
+                <img src="/{{user.username}}/Assets/img/icons/24/${SourceTypeName}.png" />
+                <span id="itemtitle">${Title}</span>
+        </h3>
+            <h4>
+                Posted to <a href="${SourceLink}">${SourceTitle}</a> on ${PublishDate}
+            </h4>
+            <div class="postfooter">
+                Permalink: <a href="${SourceLink}">${SourceLink}</a>
+            </div>
+        </div>
+    </div>
+    <div class="ItemTemplate LastFM" >
+        <div class="post">
+            <h3>
+                <img src="/{{user.username}}/Assets/img/icons/24/${SourceTypeName}.png" />
+                <span id="itemtitle">${Title} - ${Description}</span>
+        </h3>
+            <h4>
+                Posted to <a href="${SourceLink}">${SourceTitle}</a> on ${PublishDate}
+            </h4>
+            <div class="postfooter">
+                Permalink: <a href="${SourceLink}">${SourceLink}</a>
+            </div>
+        </div>
+    </div>
+    <div class="ItemTemplate Flickr YouTube CustomRSS20 CustomAtom Vimeo Picasa" >
+        <div class="post">
+            <h3>
+                <img src="/{{user.username}}/Assets/img/icons/24/${SourceTypeName}.png" />
+                <span id="itemtitle">${Title}</span>
+        </h3>
+            <h4>
+                Posted to <a href="${SourceLink}">${SourceTitle}</a> on ${PublishDate}
+            </h4>
+            ${Data}<br/><br/>
+            ${Description}<br/><br/>
+            <div class="postfooter">
+                Permalink: <a href="${SourceLink}">${SourceLink}</a>
+            </div>
+        </div>
+    </div>
+</div>

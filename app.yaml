@@ -1,0 +1,30 @@
+application: amplifriend-app
+version: 1
+runtime: python
+api_version: 1
+
+handlers:
+- url: /css
+  static_dir: templates/css
+- url: /favicon.ico
+  static_files: favicon.ico
+  upload: favicon.ico
+- url: /robots.txt
+  static_files: robots.txt
+  upload: robots.txt
+- url: /images
+  static_dir: templates/images
+- url: /js
+  static_dir: templates/js
+- url: /(.+?)/Assets/css/(.*?)
+  static_files: users/amplifeeder/Assets/css/\2
+  upload: users/amplifeeder/Assets/css/(.*?)
+- url: /(.+?)/Assets/img/icons/24/(.*?)
+  static_files: users/amplifeeder/Assets/img/icons/24/\2
+  upload: users/amplifeeder/Assets/img/icons/24/(.*?)
+- url: /(.+?)/Assets/img/(.*?)
+  static_files: users/amplifeeder/Assets/img/\2
+  upload: users/amplifeeder/Assets/img/(.*?)
+
+- url: .*
+  script: main.py

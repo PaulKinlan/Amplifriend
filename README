@@ -1,0 +1,20 @@
+AmpliFriend (This name might change)
+====================================
+
+AmplifFriend is a multi-tenant hub (with UI) that allows people to aggregate their feeds but also allow them to see people that they follow in their own feed.
+
+In many ways this a replication of some of what Friendfeed does.
+
+Users of the service will have accounts using the following url structure.
+ - User page /kinlan is visible with all my data when the public look at this url
+ - User page /kinlan can be accessed by / when the current user is logged in, this will show a list of everything that I am subscribed too.
+
+For this version I have decided that the service is entirely based on pubsubhubbub - however if /kinlan subscribes to /jonpauldavies then the protocol is by-passed.  The data will never be duplicated.
+
+It is intended that each user will configure their own feeds, and then other users will subscribe to that user.
+
+This service is open and aims to be installable by anyone on the app engine - so if you want to run your own hub you can, easily.
+
+Props must go out to Brett Slatkin et al for all the work that they have done so far on pubsub (especially since that is where most of the code lies)
+
+Paul Kinlan

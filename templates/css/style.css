@@ -1,0 +1,267 @@
+body{  
+margin:0px;
+font:normal 11px/20px verdana, Tahoma, Helvetica, sans-serif;
+color:#484848;
+background: #bbb ; 
+}
+
+#boos {
+  min-height:500px;
+  background: white;
+-moz-border-radius-bottomleft:10px;
+-moz-border-radius-bottomright:10px;
+-webkit-border-bottom-left-radius:10px;
+-webkit-border-bottom-right-radius:10px;
+padding-bottom:20px;
+ }
+
+#footer
+{
+	background-color: #484848 ;
+	-moz-border-radius-bottomleft:10px;
+	-moz-border-radius-bottomright:10px;
+	-webkit-border-bottom-left-radius:10px;
+	-webkit-border-bottom-right-radius:10px;
+	-moz-border-radius-topleft:10px;
+	-moz-border-radius-topright:10px;
+	-webkit-border-top-left-radius:10px;
+	-webkit-border-top-right-radius:10px;
+	min-height: 100px;
+	margin-bottom: 30px;
+}
+
+#footer a
+{
+	color:white;
+	
+}
+
+
+* html {
+margin:0;padding:0;
+}
+
+.imgborder
+{
+background:#FFFFFF;
+padding:3px;
+border:1px solid #ccc;
+}
+.imgborder:hover
+{
+background:#fff;
+padding:3px;
+border:1px solid #aaa;
+}
+
+.clear {
+clear:both; 
+}
+.rightalign
+{
+float:right;
+}
+.leftalign
+{
+float:left;
+}
+.textleft
+{
+text-align:left;
+}
+.textright
+{
+text-align:right;
+}
+
+p { margin: 0 0 5px 0;}
+
+a {
+text-decoration:none;
+color:#484848;
+}
+a:hover
+{
+color:#1e98b0;
+text-decoration:none;
+}
+
+img	{
+	border:0;
+}
+
+.logo{
+margin:20px 0px 20px 10px;
+}
+
+ 
+.middle_content
+{
+padding:20px;
+margin:0px 15px 0 0;
+} 
+ 
+.bg_top{
+height:30px;
+}
+
+.bg_repeat{
+
+overflow:hidden;
+height:100%;
+}
+
+.bg_bottom{
+height:30px;
+}
+
+
+.subheader{
+height:110px;
+position:relative;
+margin-bottom:20px;
+}
+
+.subheader h2{
+color:#fff;
+padding:30px 0 0 20px;
+}
+.subheader p{
+padding:40px 20px 0 0;
+color:#FFFFFF;
+}
+.subheader span
+{
+color:#fff;
+position:absolute;
+bottom:10px;
+left:25px;
+}
+
+h1{
+font: normal 40px/40px "Trebuchet MS", Arial, Helvetica, sans-serif;
+letter-spacing:-1px;
+padding:0 0 0 0;
+margin:0 0 5px 0;
+color:#000;
+}
+
+h2{
+font: normal 26px/30px "Trebuchet MS", Georgia, Arial, Helvetica, sans-serif;
+color:#444847;
+margin:0 0 5px 0;
+}
+
+h3 		{ 
+font: normal 22px/26px "Trebuchet MS", Georgia, Arial, Helvetica, sans-serif; 
+color:#484848;
+letter-spacing:-1px;
+padding:0 0 0 0;
+margin:0 0 5px 0;
+}
+
+h4 		{ 
+font: normal 20px "Trebuchet MS", Georgia, Arial, Helvetica, sans-serif; 
+color:#575757; 
+letter-spacing:-1px;
+padding:0 0 0 0;
+margin:0 0 5px 0;
+}
+
+h5 		{ 
+font: normal 16px "Trebuchet MS", Georgia, Arial, Helvetica, sans-serif; 
+color:#5d5d5d; 
+padding:0 0 0 0;
+margin:0 0 5px 0;
+}
+
+h6 		{ 
+font: italic normal 11px Georgia, Arial, Helvetica, sans-serif; 
+color:#4D4C4C; 
+padding:0;
+margin:0 0 5px 0;
+}
+
+.comments
+{
+padding:0px 5px 0 0;
+margin:0px;
+}
+
+.comments a		 { color:#777; text-decoration:none; font-weight:bold;}
+.comments a:hover	 { color:#69452e; text-decoration:none;}
+
+
+.topmenubg	{
+width:960px;
+background: #457FCC;
+-moz-border-radius-topleft:10px;
+-moz-border-radius-topright:10px;
+-webkit-border-top-left-radius:10px;
+-webkit-border-top-right-radius:10px;
+height:40px;
+}
+
+.topmenu
+{
+margin-left:20px;
+padding-top:5px;
+}
+
+/*------- Table -------*/
+table{
+border:none;
+border-collapse:collapse;
+margin:10px 0 10px 0;
+}
+
+td,th
+{
+border-bottom:1px solid #cacaca;
+color:#4c4c4c;
+padding:10px 15px;
+}
+th
+{
+text-align:left;
+padding-left:20px;
+}
+th.lefthead
+
+text-align:left;
+padding-left:20px;
+}
+th.righthead
+text-align:left;
+}
+
+table a {text-decoration:none;}
+table a:link {}
+table a:visited {}
+
+tr.even
+{
+background:#f1f1f1;
+}
+
+.footer
+{
+padding:30px 0;
+color:#fff;
+}
+
+.leftsidebar {
+ padding:20px;   
+ margin:0 0px 0 15px; }
+
+.notes 	{background: #f0f0f0;border: 1px solid #b8b8b8;}
+.success 	{background: #ccfcd1;border: 1px solid #60a400; margin-top:5px;}
+.error	{background: #f9e3e3;	border: 1px solid #e79e9e;}
+.notice 	{background: #fcf0cc;border: 1px solid #ecc735;}
+.bang 	{background: #ddd; font-size: 24px; font-style: italic; padding: 20px 100px 20px 100px; margin: 30px 15px 30px 15px; text-align: center; font-family: Georgia;}
+.notes, .notice, .success, .error 
+		{font-size: 100%;color:#484848;padding:10px;width:auto;margin: 0 0 20px 0px; text-align:left}
+.notes span, .notice span, .success span, .error span 
+		{font-weight: bold;font-size: 1.2em;padding: 2px 40px;}
+.notes p, .success p, .error p, .notice p 
+		{margin: 0px;padding: 0px 40px;}

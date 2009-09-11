@@ -1,0 +1,21 @@
+The Data Model describes how the data is stored
+
+We try to follow some simple principles.
+	- Never Duplicate Data
+	- Never Duplicate Data
+	
+	
+Each Notification is stored.
+
+	Next to each subscription notification an index entry is added, 
+		one is a list of all the owners of the data.
+		another is a list of all the people the entry is aimed for.
+	Each notification has a parent that is a subscription ( this might need to be changed to a reference property.)
+		
+SubscriptionOwners - 
+	A subscription has many owners (users), this is used by queries that need
+	
+SubscriptionReaders -
+	A subscription can have many subscribers (people who read the subscription), when an notification is added we attach a list of the people who are to read this.
+	
+	

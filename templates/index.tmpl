@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Amplifriend!</title>
+<link rel="stylesheet" type="text/css" media="all" href="/css/960.css" />
+<link rel="stylesheet" type="text/css" media="all" href="/css/style.css" />
+<!--[if lt IE 7]>
+        <script type="text/javascript" src="unitpngfix.js"></script>
+<![endif]-->
+<script type="text/javascript" src="/js/jquery-1.3.2.min.js"></script>
+</script>
+<style>
+
+tbody tr:hover 	{}
+
+</style>
+</head>
+<body>
+<div class="container_16">
+    <div class="header">
+        <div class="grid_6"><a href="/"><img src="/images/ffollo.png" class="logo" /></a></div>
+        <div class="grid_10 slogan">
+        </div>
+    </div>
+</div>
+
+<div class="clear">&nbsp;</div>
+
+<div class="container_16 topmenubg">
+    <div class="topmenu">
+       <span style="color: white; font-weight: 800; margin-top: 7px;">This is beta... and in development - it might break.</span>
+    </div>
+</div>
+
+<div class="clear">&nbsp;</div>
+
+<div id="home-slider" >
+    <div class="container_16" id="boos">
+        <div class="grid_12">
+			<div style="padding:15px;">
+				<h1>Amplifriend &mdash; It's all about you!</h1>
+				
+				<br />
+				<h2>Latest</h2>
+				<div>
+					{% for message in recent_messages %}
+					<div>
+						<h3>{% for owner in message.parent.users %}<a href="/{{owner}}">{{owner}}</a> {% endfor %}</h3>
+						<p>{{ message.title }} -
+						<a href="{{message.source_link}}">by {{message.source_title}}</a> <a href="{{message.feed_link}}" target="_blank">via {{message.feed_title}}</a> <a href="{{message.link}}"># {{message.updated}}</a></p>
+					</div>
+					{% endfor %}
+				</div>
+			</div>
+       </div>
+	   <div class="grid_4">
+			<div style="padding:15px; text-align: right;">
+				<div style="margin-top:15px;">
+				</div>
+				<h2>Login</h2>
+				<form action="/session/create" method="post">
+					<label for="username">Username: </label><input type="input" name="username" /><br/>
+					<label for="password">Password: </label><input type="password" name="password" /><br/>
+					<input type="submit" value="Login" />
+				</form>
+				<br/>
+				<h2>Create an Account</h2>
+				<form action="/user/create" method="post">
+					<label for="username">Username: </label><input type="input" name="username" /><br/>
+					<label for="email">Email: </label><input type="input" name="email" /><br/>
+					<label for="password">Password: </label><input type="password" name="password" /><br/>
+					<input type="submit" value="Create User" />
+				</form>
+			</div>
+	   </div>
+ 			<div class="clear">&nbsp;</div>
+		
+    </div>
+
+    <div class="bg_bottom"></div>
+</div>
+<div class="clear">&nbsp;</div>
+<div class="container_16" id="footer">
+    <div class="grid_11" style="background-color: #484848 ;">
+        <div class="footer">&copy; Copyright 2009. All Rights Reserved.<br />
+            Powered by <a href="http://www.topicala.com/">Topicala Ltd</a></div>
+
+    </div>
+
+ 	<div class="grid_5" style="background-color: #484848 ;">
+       
+        <div class="footer">
+            <a href="/terms">Terms</a> | <a href="/contact">Contact</a> | <a href="/">Home</a></div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<html>
+<head>
+	<title>Services</title>
+</head>
+<body>
+	<h1>Services</h1>
+	<tr>
+		<td>Name</td>
+		<td>Url</td>
+		<td>Parser</td>
+		<td>Action</td>
+	</tr>
+	<table>
+	{% for service in services %}
+	<tr>
+		<td>{{service.name}}</td>
+		<td>{{service.url}}</td>
+		<td>{{service.parser}}</td>
+		<td>
+			<form method="post" action="/services/delete">
+				<input type="hidden" name="id" value="{{service.key}}" />
+				<input type="submit" value="Delete" />
+			</form>	
+		</td>
+	</tr>
+	{% endfor %}
+	</table>
+	<h2>Create Service</h2>
+	<form method="post" action="/service/create">
+		<label for="name">Name:</label><input type="text" name="name" />
+		<label for="url">Url:</label><input type="text" name="url" />
+		<label for="parser">Parser:</label><input type="text" name="parser" />
+		<input type="submit" name="Create" />
+	</form>
+</body>
+</html>

@@ -1,0 +1,114 @@
+﻿<div id="TemplateSettings">
+    <div id="PageSize">
+        20</div>
+</div>
+<div id="MasterTemplate">
+    <div id="container">
+        <div id="header">
+            <h1 id="title">
+                </h1>
+            <h2 id="tagline">
+            </h2>
+        </div>
+        <div id="content">
+            <div id="left">
+                <table id="TemplateItemsHolder" border="0" cellspacing="0" cellpadding="0">
+
+                
+                </table>
+                <div id="pager" />
+            </div>
+            <div id="right">
+                <h3>
+                    About This Site</h3>
+                    <div id="about"/>
+                    <div class="rightitem" />
+                     <h3>
+                Channels</h3>
+                <div id="channels"/>
+                <div class="rightitem" />
+                <h3>
+                Pages</h3>
+                <div id="pages"/>
+                <div class="rightitem" />
+                <h3>
+                Search</h3>
+                <div id="Search"/>
+                <div class="rightitem" />
+                 <h3>Tags</h3>
+                <div id="TagList"/>
+            </div>
+            <div style="clear: both; float: none;" />
+                <div id="footer">
+                    This site is powered by <a href="http://www.amplifeeder.com">AmpliFeeder</a>, an
+                    open source lifestream platform by <a href="http://www.j-dee.com">Jon Paul Davies</a>.
+                    AmpliFeeder is available under the <a href="http://www.fsf.org/licensing/licenses/agpl-3.0.html">
+                        GNU Affero General Public License</a> (or AGPL for short),a version of the <a href="http://www.gnu.org/licenses/gpl.html">
+                            GNU GPL</a> designed specifically for web applications. All trademarks,
+                    slogans, text or logo represented, used or infered to on this site are the property
+                    of their respective owners.
+                </div>
+        
+        </div>
+    </div>
+    
+     <script type="text/javascript">
+         function MasterPageRendered() {
+             $(".itemcontent:even").css("background-color", "#fff");
+             $(".spacer:even img").attr("src", "/{{user.username}}/Themes/insight/sigarrowwhite.png");
+         }
+          </script>
+    
+</div>
+    <div id="ItemTemplates">
+        <div class="ItemTemplate Twitter Flickr Digg YouTube Delicious CustomRSS20 CustomAtom Stumbleupon Reddit GoogleReader Mixx Upcoming Tumblr Facebook LastFM Brightkite Picasa Vimeo">
+            <tr class="tempitem">
+                        <td class="date">
+                            <div class="day">
+                                12
+                            </div>
+                            <div class="month">
+                                Dec
+                            </div>
+                            <div class="year">
+                                2009
+                            </div>
+                        </td>
+                        <td class="spacer">
+                            <img src="/{{user.username}}/Themes/insight/sigarrowgray.png" />
+                        </td>
+                        <td class="itemcontent alt">
+                            ${Title}
+                        </td>
+                    </tr>
+        </div>
+        <div class="ItemTemplate Microblog">
+            <tr class="item">
+                        <td class="date">
+                            <div class="day">
+                                12
+                            </div>
+                            <div class="month">
+                                Dec
+                            </div>
+                            <div class="year">
+                                2009
+                            </div>
+                        </td>
+                        <td class="spacer">
+                            <img src="sigarrowgray.png">
+                        </td>
+                        <td class="itemcontent alt">
+                            one two three this is a test item one two three this is a test item ne two three
+                            this is a test item one two three this is a test itne two three this is a test item
+                            one two three this is a test it
+                        </td>
+                    </tr>
+            </div>
+    </div>
+    <div id="ChannelTemplate">
+        <img class="channelbutton" id="${Id}" alt="all ${Title} posts" src="/{{user.username}}/Assets/img/icons/24/${SourceTypeName}.png" />
+    </div>
+	    <div id="ItemTypeTemplate">
+        <img class="channelbutton" id="${Id}" alt="all ${Title} posts" src="/{{user.username}}/Assets/img/icons/24/${SourceTypeName}.png" />
+    </div>

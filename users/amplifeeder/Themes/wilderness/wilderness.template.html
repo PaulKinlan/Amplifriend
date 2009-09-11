@@ -1,0 +1,114 @@
+﻿ <div id="TemplateSettings">
+     <div id="PageSize">20</div>
+   </div>
+   
+   
+   
+    <div id="MasterTemplate" >
+    
+   
+   
+   
+   
+    <div id="bodywrapper">
+        <div id="container">
+            <div id="content">
+                <div id="left">
+                    <h1 id="title">
+                        Site title</h1>
+                    <h2 id="tagline">
+                        Tagline for site</h2>
+                    <div id="leftcontent">
+                        <h3>
+                            Feed items</h3>
+                                                      
+                                  <div id="alertbox" >hello</div>                      
+                       
+          <div id="TemplateItemsHolder" />
+              
+                        <div id="pager" />
+                    </div>
+                </div>
+                <div id="right">
+                    <div id="rss">
+                        <a href="Feed.aspx">
+                            <img style="border: 0px;" src="/Themes/wilderness/img/feedicontop.png" />
+                        </a>
+                    </div>
+                    <div id="rightcontent">
+                        <h3>
+                            About Me</h3>
+                            <div id="about"/>
+                        <h3 class="rightheader">
+                            Channels</h3>
+                            <div id="channels"/>
+                        <h3 class="rightheader">
+                            Pages</h3>
+                            <div id="pages"/>
+                        <h3 class="rightheader">
+                            Tags</h3>
+                            <div id="TagList"/>
+                        <h3 class="rightheader">
+                            Search</h3>
+                            <div id="Search"/>
+                    </div>
+                </div>
+            </div>
+            <div style="clear: both; float: none;">
+            </div>
+        </div>
+        <div id="footercontainer">
+            <div id="footerbar">
+                &nbsp;
+            </div>
+            <div id="footer">
+                This site is powered by <a href="http://www.amplifeeder.com">AmpliFeeder</a>, an open source lifestream platform by <a href="http://www.j-dee.com">Jon Paul Davies</a>.
+                AmpliFeeder is available under the <a href="http://www.fsf.org/licensing/licenses/agpl-3.0.html">GNU Affero General Public License</a> (or AGPL for short),a version of the <a href="http://www.gnu.org/licenses/gpl.html">GNU GPL</a> designed specifically for web applications.
+
+                All trademarks, slogans, text or logo represented, used or infered to on this site are the property of their respective owners.
+            </div>
+            <div id="bottomline">
+                &nbsp;
+            </div>
+            <div style="clear: both; float: none;">
+            </div>
+        </div>
+    </div>
+   
+    </div>  
+    
+<div id="ItemTemplates">
+    <div class="ItemTemplate Twitter Flickr Digg YouTube Delicious CustomRSS20 CustomAtom Stumbleupon Reddit GoogleReader Mixx Upcoming Tumblr Facebook LastFM Brightkite Picasa Vimeo" >   
+         <div class="feeditem">
+             <img class="icon" width="18px" height="18px" src="/{{user.username}}/Assets/img/icons/24/${SourceTypeName}.png" alt="" />
+             <div class="data">
+                 ${PublishDate} : <a href="#" onclick="window.open('${SourceLink}');"> ${Title}</a> 
+             </div> 
+             <div style="clear:both;float:none;" />
+         </div>
+    </div>
+	
+	<div class="ItemTemplate Microblog" >   
+         <div class="feeditem">
+             <img class="icon" width="18px" height="18px" src="/{{user.username}}/Assets/img/icons/24/${SourceTypeName}.png" alt="" />
+             <div class="data">
+                 ${PublishDate} :  ${Title}
+             </div> 
+             <div style="clear:both;float:none;" />
+         </div>
+    </div>
+</div>
+    
+    <div id="ChannelTemplate">
+  <div class="channel" id="${Id}">
+    <img width="18px" height="18px" class="channelbutton" id="${Id}" alt="all ${Title} posts" src="/{{user.username}}/Assets/img/icons/24/${SourceTypeName}.png" /> ${Title}
+    <br style="clear:both;float:none;" />
+  </div>
+  </div>
+  
+      <div id="ItemType">
+  <div class="channel" id="${Id}">
+    <img width="18px" height="18px" class="channelbutton" id="${Id}" alt="all ${Title} posts" src="/{{user.username}}/Assets/img/icons/24/${SourceTypeName}.png" /> ${Title}
+    <br style="clear:both;float:none;" />
+  </div>
+  </div>

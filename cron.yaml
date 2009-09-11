@@ -1,0 +1,4 @@
+cron:
+- description: Expire Session that have not been used for a period.
+  url: /session/expire
+  schedule: every 1 hours

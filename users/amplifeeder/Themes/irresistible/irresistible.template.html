@@ -1,0 +1,166 @@
+<div id="TemplateSettings">
+    <div id="PageSize">
+        0</div>
+</div>
+<div id="MasterTemplate">
+    <div id="wrap">
+        <div id="header">
+            <div id="logo">
+                <a href="default.aspx" title="Just another WordPress weblog">
+                    <img class="title" src="/Themes/irresistible/images/logo.png" alt="Irresistible" /></a>
+                <h1 class="replace">
+                    <a href="default.aspx">Irresistible</a></h1>
+            </div>
+            <div id="hi">
+                <p class="nomargin">
+                    <div id="about">
+                        tagline</div>
+                </p>
+            </div>
+        </div>
+        <div id="content" class="home">
+            <div id="main">
+                <h3 id="myWritings" class="replace">
+                    My Writings. My Thoughts.</h3>
+                <div class="box1 clearfix">
+                    <div class="Feature">
+                        <div class="itemcount">4</div>
+                        <div class="itemtype">post</div>
+                    </div>
+                    <p class="fr">
+                        <a href="#">&nbsp;</a></p>
+                </div>
+                <div id="videos">
+                    <h3 id="myVideos" class="replace">
+                        My videos. Featured videos.</h3>
+                    <div class="box1 clearfix" id="video">
+                        <div class="Feature">
+                            <div class="itemcount">5</div>
+                            <div class="itemtype">video</div>
+                        </div>
+                    </div>
+                    <!--box1-->
+                </div>
+                <!--videos-->
+            </div>
+            <!-- / #main -->
+            <div id="sidebar">
+                <div id="flickr">
+                    <h3 id="myPhotos" class="replace">
+                        My photos. Now you know me.</h3>
+                    <div>
+                        <div class="Feature">
+                            <div class="itemcount">10</div>
+                            <div class="itemtype">image</div>
+                        </div>
+                    </div>
+                    <div class="clear">
+                    </div>
+                </div>
+                <h3 id="myLifestream" class="replace">
+                    My lifestream. Stay updated with me.</h3>
+                <div class="box1 clearfix lifestream">
+               
+                            <div class="Feature">
+                                <div class="itemcount">10</div>
+                                <div class="itemtype">note</div>
+                            </div>
+                 
+                </div>
+                <h3 id="myFavblog" class="replace">
+                    My favblog. Feeds from them.</h3>
+                <div class="box1 clearfix lifestream">
+                   
+                            <div class="Feature">
+                                <div class="itemcount">10</div>
+                                <div class="itemtype">bookmark</div>
+                            </div>
+                        
+                </div>
+            </div>
+            <!-- / #sidebar -->
+        </div>
+        <!-- / #content -->
+    </div>
+    <!-- / #wrap -->
+    <div id="footer">
+        <div id="footerWrap">
+            <p id="copy">
+                Powered by <a href="http://www.amplifeeder.com">AmpliFeeder</a>. Irresistible theme
+                by <a href="http://www.woothemes.com">WooThemes</a></p>
+            <ul id="footerNav">
+                <li><a href="http://www.woothemes.com/" title="Irresistible Theme by WooThemes">
+                    <img src="/Themes/irresistible/images/img_woothemes.jpg" alt="WooThemes" height="21"
+                        width="87" /></a></li>
+            </ul>
+        </div>
+        <!-- / #footerWrap -->
+    </div>
+    <!-- / #footer -->
+</div>
+<div id="FeatureTemplates">
+    <div class="FeatureTemplate post">
+        <div class="template">
+            <div class="post clearfix">
+                <h3 id="post-154">
+                    <a href="#" onclick="top.location='${SourceLink}';">${Title}</a></h3>
+                <span class="txt0">${PrettyDate}</span>
+                <p>
+                    ${Description}</p>
+            </div>
+        </div>
+    </div>
+    <div class="FeatureTemplate video">
+    
+        <div class="template videobox">
+        
+        <table>
+        <tr>
+        <td style="vertical-align: top;padding-right:10px;width:131px;">
+         <a href="#" onclick="top.location='${SourceLink}';">
+                <img src="/Themes/irresistible/images/video_bg.png" style="background: url(${ItemContentPreview});background-position: center;" alt="${Title}" height="97" width="130" /></a>
+        </td>
+        <td style="vertical-align: top;">
+        ${Title}
+            <div class="lifestream_meta">
+                <abbr class="lifestream_hour">
+                    ${PrettyDate}</abbr>
+                <span class="lifestream_via">via <a href="#" onclick="window.open('${SourceLink}');">
+                    ${SourceTitle}</a></span>
+            </div>
+        </td>
+        </tr>
+        </table>
+        
+           
+            
+        </div>
+    </div>
+    <div class="FeatureTemplate image">
+        <div class="flickr_badge_image">
+            <a href="#" onclick="top.location='${SourceLink}';">
+                <img src="/Themes/irresistible/images/image_bg.png" style="background: url(${ItemContentPreview});background-position: center;" alt="${Title}" /></a>
+        </div>
+    </div>
+    <div class="FeatureTemplate note bookmark">
+        <div class="template">
+           <table><tr>
+                <td style="vertical-align: top;padding-right:10px;width:25px;" class="lifestream_icon">
+                    <a href="#" onclick="window.open('${SourceLink}');">
+                        <img height="24px" width="24px" src="/{{user.username}}/Assets/img/icons/24/${SourceTypeName}.png" /></a>
+                </td>
+                <td style="vertical-align: top;" class="lifestream_text">
+                    
+                        ${Title}
+                    
+                    <div class="lifestream_meta">
+                        <abbr class="lifestream_hour">
+                            ${PrettyDate}</abbr>
+                        <span class="lifestream_via">via <a href="#" onclick="window.open('${SourceLink}');">
+                            ${SourceTitle}</a></span>
+                    </div>
+                </td></tr>
+        </table>
+        </div>
+    </div>
+</div>

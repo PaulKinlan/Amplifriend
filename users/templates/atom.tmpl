@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+	<title>{{ user.username }} Feed</title>
+	<link href="http://www.amplifriend.com/{{user.username}}/atom.xml" rel="self" />
+	<link rel="hub" href="http://www.amplifriend.com/{{user.username}}/hub"  />
+	<updated>{{user.updated}}</updated>
+	<author>
+		<name>{{user.username}}</name>
+		<email>{{user.email}}</email>
+	</author>
+ 	{% for entry in entries %}
+	<entry>
+		<title>{{ entry.title }}</title>
+		<id>com.amplifriend:{{entry.key}}</id>
+		<link href="{{entry.source_link}}" />
+		<updated>{{ entry.updated }}</updated>
+		<summary></summary>
+	</entry>
+	{% endfor %}
+ 
+</feed>

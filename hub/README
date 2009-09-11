@@ -1,0 +1,10 @@
+Most of this code is taken from the pubsubhubbub reference application.
+
+Each user has a hub (http://www.amplifriend.com/kinlan/hub for example).
+
+Currently no user can publish to a hub from outside, instead a user's subcriptions will cause an event to be published to all the subscribers to the hub.
+
+
+- Anyone (users of amplifriend or external systems) can subscribe to a users hub to receive notifications.
+- A user on the system registers a list of feeds that they "own" and amplifriend will poll/subscribe to these feeds.  When any of these are updated, they are stored for use on the site, but they are also relayed out to all the subscribers of this feed.
+	- at the moment we maintain an index of all amplifrienders who can read an individual users posts, but we also create a subscription to the hub the thinking behind this is that we can move peoples subscriptions off the service if they wish to host it themselves.

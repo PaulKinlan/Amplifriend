@@ -1,0 +1,721 @@
+﻿       HTML
+        {
+            width: 100%;
+            height: 100%;
+        }
+      
+        body
+        {
+            padding: 0px;
+            font-size: 11px;
+            margin: 0px;
+            background-repeat: repeat-x;
+            font-family: Verdana, Arial, Helvetica, sans-serif;
+            background-color: #fff;
+        }
+        
+        #container
+        {
+            padding: 0px;
+            margin-left: auto;
+            width: 999px;
+            margin-right: auto;
+            background-color: #fff;
+        }
+       
+        #topbar
+        {
+            margin-top:30px;
+        }
+       
+        #nav
+        {
+            margin-left:915px;  
+            width:210px;
+            margin-bottom:8px;
+        }
+        
+        #nav .rsslink
+        {
+            background-image:url(img/feedicon.png);
+            background-position:right;
+            background-repeat:no-repeat;
+            padding-right:16px;
+            text-decoration:none;
+            padding-left:12px;
+            color:#FF9900;
+        }
+        
+        #nav a:hover
+        {
+         color:#888;   
+        }
+
+        .words
+        {
+            font-size: 11px;
+            line-height: 140%;
+        }
+
+        #header
+        {
+            clear:both;
+            display:block;
+            border: #fff 0px solid;
+            padding: 0px;
+            background-image:url(img/banner.png);
+            height:108px;
+        }
+
+        .footer
+        {
+            clear: both;
+            padding: 0px;
+            border-bottom:solid 40px #fff;
+            margin: 0px 0px 0px 0px;
+        }
+        
+        .footer .links
+        {
+            padding-right: 0px;
+            padding-left: 5px;
+            float: right;
+            padding-bottom: 0px;
+            margin: 0px;
+            padding-top: 7px;
+            text-align: right;
+        }
+        
+        .footer .copy
+        {
+            float: left;
+            margin: 8px 0px 0px;
+        }
+        
+        #primary 
+        {
+            padding: 0px;
+            display: inline;
+            float: left;
+            width: 760px;
+            font-family: Verdana, Arial, Helvetica, sans-serif;
+            height: auto;
+            background-color: #fff;
+        }
+        
+        #alertbox
+        {
+            width: 710px;
+            border:dashed 1px #DEDEDE;
+            background-color:#EEE;
+            color:#222222;
+            padding:20px;
+            text-align:center;
+            margin-bottom:8px;
+        }
+        
+        .Item
+        {
+            width: 182px;
+            height: 182px;
+            margin: 0px 8px 8px 0px;
+            
+            float: left;
+            display:inline;
+        }
+        
+        #secondary
+        {
+            float: left;
+            width: 239px;
+        }
+        
+        .infopanel
+        {
+            border: #000 1px solid;         
+            background: #000;      
+            width: 236px;    
+            margin-bottom:8px;                 
+        }
+
+        .infopanelheader
+        {
+            padding: 5px;
+            padding-left: 10px;
+            margin: 0px;
+            font-weight: bold;
+            color: #fff;
+        } 
+
+       .infopanelcontent
+        {
+            padding: 10px;
+            background: #ffffff;
+        }
+        
+        #TagList
+        {
+             color: #000;
+        }
+        
+        .tag a
+        {
+
+            color: #000;
+        }      
+        
+        .tag a:hover
+        {
+         color:#888;   
+        }
+        
+        #tagpager
+        {
+            margin-left:170px;
+            color:#3274d0;
+            text-decoration:underline;
+        }
+
+        #txtsearch
+        {
+            border: 1px solid #000;
+            width:155px;
+        }
+
+        .btn
+        {
+            border: 1px solid #000;
+            background-color:#CCC;
+            padding:2px;
+            margin-left:3px;
+            font-weight:bold;
+        }
+
+        #channels, #pages
+        {
+            margin-top:5px;   
+            margin-left:5px;   
+        }
+        
+        #Pager
+        {
+         clear:both;
+         display:block;  
+         width:740px;
+         padding-bottom:16px;
+         
+        }
+        
+        
+        .formstyle
+        {
+            width: 742px;
+	        border: 1px solid #000;
+	        padding: 5px;
+	        margin-bottom:8px;
+        }
+        
+        .commentname
+        {
+            font-weight:bold;
+            margin-bottom:8px;
+            
+        }
+        .commentbody
+        {
+         width:742px;
+         border-bottom:dashed 1px #555;
+         margin-bottom:16px;   
+         padding-bottom:8px;
+        }
+        
+        .commentdate
+        {
+            margin-bottom:8px;
+            color:#999;
+        }
+        
+        #txtComment
+        {
+         height:150px;   
+        }
+        
+        .channelbutton
+        {
+         margin:2px;   
+        }
+        
+        
+        .clear
+        {
+            float:none;
+            clear:both; 
+            
+        }
+      
+        .TwitterBox
+        {
+            background-image: url(img/twitter_background.png);
+            background-repeat:no-repeat;
+            
+        }
+        
+        .TwitterBox .Title
+        {
+            font-weight:bold;
+            margin: 50px 20px 10px 20px;
+            height: 105px;
+            overflow:hidden;
+            width:142px;
+        }
+        
+        .itemfooter
+        {
+            width:170px;
+            font-size: 9px;
+            margin: 0px 5px 0px 5px;
+        }
+        
+        .TwitterBox .itemfooter
+        {
+            margin-top: 12px;
+            
+        }
+        
+        .PrettyDate
+        {
+            float:left;
+        }
+        
+        .CommentCount
+        {
+
+            float: right;
+            text-align: right;
+        }
+        
+        .FlickrBox
+        {
+            background-image: url(img/flickr_background.png);
+            background-repeat:no-repeat;
+        }
+        
+        .FlickrBox .ImageHolder
+        {
+            margin: 33px 1px 1px 1px;
+            height: 130px;
+        }
+        
+        .FlickrBox .itemfooter
+        {
+            margin-top: 4px;
+            
+        }
+        
+        .LastFMBox
+        {
+            background-image: url(img/lastfm_background.png);
+            background-repeat:no-repeat;
+        }
+        
+        .LastFMBox .Title
+        {
+            font-weight:bold;
+            margin: 70px 20px 10px 20px;
+            height: 85px;
+            overflow:hidden;
+            color:#FFF;
+            text-align:center;
+        }
+        
+        .lastfmdescription
+        {
+            color:#DDD;
+        }
+        
+        .LastFMBox .itemfooter
+        {
+            margin-top: 12px;
+            color:#CCC;
+        }
+        
+        .YouTubeBox
+        {
+            background-image: url(img/youtube_background.png);
+            background-repeat:no-repeat;
+        }
+        
+        .YouTubeBox .itemfooter
+        {
+            margin-top: 25px;
+            color:#000;
+        }
+        
+        .youtubemovie
+        {
+            margin: 49px 1px 1px 31px;
+            height: 90px;
+            width: 120px;
+        }
+        
+        .DiggBox
+        {
+            background-image: url(img/digg_background.png);
+            background-repeat:no-repeat;
+        }
+        
+        .DiggBox .Title
+        {
+            font-weight:bold;
+            margin: 50px 20px 10px 20px;
+            height: 105px;
+            overflow:hidden;
+        }
+        
+        .DiggBox .itemfooter
+        {
+            margin-top: 12px;
+            
+        }
+        
+        .DeliciousBox
+        {
+            background-image: url(img/delicious_background.png);
+            background-repeat:no-repeat;
+        }
+        
+        .DeliciousBox .Title
+        {
+            font-weight:bold;
+            margin: 50px 20px 10px 20px;
+            height: 105px;
+            overflow:hidden;
+            color:#3274d0;
+
+        }
+        
+        .DeliciousBox .Title a
+        {
+
+            text-decoration:none;
+        }
+        
+        .DeliciousBox .itemfooter
+        {
+            margin-top: 12px;
+            
+        }
+        
+        .CustomRSS20Box
+        {
+            background-image: url(img/CustomRSS20_background.png);
+            background-repeat:no-repeat;
+        }
+        
+        .CustomRSS20Box .Title
+        {
+            font-weight:bold;
+            margin: 50px 20px 10px 20px;
+            height: 105px;
+            overflow:hidden;
+            color:#000;
+        }
+        
+        .CustomRSS20Box .itemfooter
+        {
+            margin-top: 12px;
+            
+        }
+        
+        .StumbleuponBox
+        {
+            background-image: url(img/stumbleupon_background.png);
+            background-repeat:no-repeat;
+            
+        }
+        
+        .StumbleuponTitle
+        {
+            font-size: 9px;
+            margin: 6px 5px 0px 5px;
+            text-align:center;
+            overflow:hidden;
+            width:170px;
+            height:25px;
+            color:#085ea4;
+        }
+        
+        .StumbleuponImageHolder
+        {
+            margin: 45px 1px 1px 26px;
+            height: 87px;
+            width: 130px;
+            border:solid 1px #085ea4;
+        }
+        
+        .StumbleuponBox .itemfooter
+        {
+            margin-top: 2px;
+            
+        }
+        
+        .RedditBox
+        {
+            background-image: url(img/reddit_background.png);
+            background-repeat:no-repeat;
+            
+        }
+        
+        .RedditTitle
+        {
+            font-weight:bold;
+            margin: 50px 20px 10px 20px;
+            height: 105px;
+            overflow:hidden;
+            width:142px;
+        }
+        
+        
+        .RedditBox .itemfooter
+        {
+            margin-top: 12px;
+            
+        }
+        
+        .GoogleBox
+        {
+            background-image: url(img/google_background.png);
+            background-repeat:no-repeat;
+            
+        }
+        
+        .RedditTitle
+        {
+            font-weight:bold;
+            margin: 50px 20px 10px 20px;
+            height: 105px;
+            overflow:hidden;
+            width:142px;
+        }
+           
+        .Reddit .itemfooter
+        {
+            margin-top: 12px;
+            
+        }
+        
+        .FacebookBox
+        {
+            background-image: url(img/facebook_background.png);
+            background-repeat:no-repeat;
+            color:#fff;
+        }
+        
+         .FacebookTitle
+        {
+            font-weight:bold;
+            margin: 50px 20px 10px 20px;
+            height: 105px;
+            overflow:hidden;
+            width:142px;
+            
+        }
+          
+        .FacebookBox .itemfooter
+        {
+            margin-top: 12px;
+            
+        }
+        
+        .MixxBox
+        {
+            background-image: url(img/mixx_background.png);
+            background-repeat:no-repeat;
+            
+        }
+        
+        .MixxTitle
+        {
+            font-weight:bold;
+            margin: 50px 20px 10px 20px;
+            height: 105px;
+            overflow:hidden;
+            width:142px;
+        }
+        
+        .MixxBox .itemfooter
+        {
+            margin-top: 12px;
+            color:#fff;
+            
+        }
+        
+        .MicroblogBox
+        {
+            background-image: url(img/microblog_background.png);
+            background-repeat:no-repeat;
+            color:#fff;
+        }
+        
+        .MicroblogTitle
+        {
+            font-weight:bold;
+            margin: 50px 20px 10px 20px;
+            height: 105px;
+            overflow:hidden;
+            width:142px;
+        }
+        
+        
+        .MicroblogBox .itemfooter
+        {
+            margin-top: 12px;
+            
+        }
+        
+        .UpcomingBox
+        {
+            background-image: url(img/upcoming_background.png);
+            background-repeat:no-repeat;
+            color:#fff;
+        }
+        
+        .UpcomingTitle
+        {
+            font-weight:bold;
+            margin: 50px 20px 10px 20px;
+            height: 105px;
+            overflow:hidden;
+            width:142px;
+        }
+        
+        
+        .UpcomingBox .itemfooter
+        {
+            margin-top: 12px;
+            color:#000;
+        }
+        
+                .TumblrBox
+        {
+            background-image: url(img/tumblr_background.png);
+            background-repeat:no-repeat;
+            color:#fff;
+        }
+        
+        .TumblrTitle
+        {
+            font-weight:bold;
+            margin: 50px 20px 10px 20px;
+            height: 105px;
+            overflow:hidden;
+            width:142px;
+        }
+        
+        
+        .TumblrBox .itemfooter
+        {
+            margin-top: 12px;
+            
+        }
+        
+        .VimeoBox
+        {
+            background-image: url(img/vimeo_background.png);
+            background-repeat:no-repeat;
+        }
+        
+        .VimeoBox .itemfooter
+        {
+            margin-top: 25px;
+            color:#fff;
+        }
+        
+        .vimeomovie
+        {
+            margin: 45px 1px 1px 25px;
+            height: 97px;
+            width: 130px;
+        }
+        
+        .PicasaBox
+        {
+            background-image: url(img/picasa_background.png);
+            background-repeat:no-repeat;
+        }
+        
+        .PicasaBox .ImageHolder
+        {
+            margin: 33px 1px 1px 1px;
+            height: 130px;
+        }
+        
+        .PicasaBox .itemfooter
+        {
+            margin-top: 4px;
+            
+        }
+        
+        .BrightkiteBox
+        {
+            background-image: url(img/brightkite_background.png);
+            background-repeat:no-repeat;
+            color:#fff;
+        }
+        
+         .BrightkiteTitle
+        {
+            font-weight:bold;
+            margin: 50px 20px 10px 20px;
+            height: 105px;
+            overflow:hidden;
+            width:142px;
+            
+        }
+          
+        .BrightkiteBox .itemfooter
+        {
+            margin-top: 12px;
+            
+        }
+  
+  #primarycontent,.formstyle,.commentbody
+{
+width:720px;
+}
+
+#channelitems
+{
+margin:0px;
+padding:0px;
+} 
+
+
+      
+#channelitems li
+{
+margin:0px;
+padding-bottom:10px;
+}
+ 
+#channelitems li a
+{
+text-decoration:none;
+color:blue;
+}
+
+#channelitems li a:hover
+{
+text-decoration:underline;
+}
+
+#channelitems li {
+list-style-type:none;
+
+}
+
+#channelitems li img {
+padding-right:10px;
+}
+/*
+

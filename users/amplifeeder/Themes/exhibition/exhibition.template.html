@@ -1,0 +1,84 @@
+﻿ <div id="TemplateSettings">
+     <div id="PageSize">20</div>
+   </div>
+    <div id="MasterTemplate" >
+    
+    <div id="header">
+    <div id="titles">
+    
+    <h1 id="title">
+    
+    </h1>
+    <h2 id="tagline">
+    
+    </h2>
+    </div>
+    </div>
+    <div id="content">
+        <div id="about" class="itemtop">
+        </div>
+        <div id="items">
+        
+      <div id="alertbox" >hello</div>
+                
+                <div id="TemplateItemsHolder" />
+                <div id="pager" />
+      
+            
+        </div>
+        <div style="clear:both;float:none;" ></div>
+    </div>
+    <div id="footer">
+    <div id="footertext">
+        This site is powered by <a href="http://www.amplifeeder.com">AmpliFeeder</a>, an open source lifestream platform by <a href="http://www.j-dee.com">Jon Paul Davies</a>.
+        AmpliFeeder is available under the <a href="http://www.fsf.org/licensing/licenses/agpl-3.0.html">GNU Affero General Public License</a> (or AGPL for short),a version of the <a href="http://www.gnu.org/licenses/gpl.html">GNU GPL</a> designed specifically for web applications.
+
+        All trademarks, slogans, text or logo represented, used or infered to on this site are the property of their respective owners.
+    </div>
+    </div>
+
+    </div>
+    
+    <div id="ItemTemplates">
+    <div class="ItemTemplate Twitter Flickr Digg YouTube Delicious CustomRSS20 CustomAtom Stumbleupon Reddit GoogleReader Mixx Upcoming Tumblr Facebook LastFM Brightkite Picasa Vimeo" >
+
+    
+                <div class="item">
+                <div class="meta">
+                    ${PublishDate}
+                </div>
+                <div class="itemcontent">
+                    <a onclick="window.open('${SourceLink}');" href="#">${SourceTitle}</a>: ${Title}
+                </div>
+                <div class="icon">
+                  <img src="/{{user.username}}/Assets/img/icons/24/${SourceTypeName}.png" alt="" />
+                </div>
+               
+            </div>  
+     </div>
+
+
+        <div class="ItemTemplate Microblog" >
+            <div class="item">
+                <div class="meta">
+                    ${PublishDate}
+                </div>
+                <div class="itemcontent">
+                    ${SourceTitle}: ${Title}
+                </div>
+                <div class="icon">
+                    <img src="/{{user.username}}/Assets/img/icons/24/${SourceTypeName}.png" alt="" />
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+    
+    <div id="ChannelTemplate">
+  <div class="channel" id="${Id}">
+    <img class="channelbutton" id="${Id}" alt="all ${Title} posts" src="/{{user.username}}/Assets/img/icons/24/${SourceTypeName}.png" />${Title}
+    <br style="clear:both;float:none;" />
+  </div>
+  </div>

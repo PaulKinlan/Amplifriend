@@ -1,0 +1,6 @@
+This is a port of the Awesome Amplifeeder by Jon Paul Davies (http://www.j-dee.com/)
+
+Amplifeeder themes are licenced under a creative commons licence, 
+Amplifeeder themeing engine is maintained under a AGPL 2.0 Licence.
+
+TODO: Themes will need to be placed in a zip or in the datastore so that deployments are either not affected by the limit of files on the App Engine.

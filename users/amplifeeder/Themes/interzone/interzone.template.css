@@ -1,0 +1,220 @@
+﻿* {
+margin:0;
+padding:0
+}
+
+body {
+background:url(img/header.jpg) no-repeat top center;
+background-color:#000;
+text-align:center;
+font-family:Verdana
+}
+
+#container {
+width:875px;
+margin-left:auto;
+margin-right:auto;
+text-align:left;
+padding-top:55px;
+padding-left:20px;
+border-bottom:solid 50px #000;
+}
+
+h1 {
+color:#fff;
+font-size:38px;
+letter-spacing:-2px
+}
+
+h1 a{
+color:#fff;
+text-decoration:none;
+}
+
+h2 {
+font-size:12px;
+color:#fff;
+padding-bottom:75px;
+letter-spacing:-1px
+}
+
+h3 {
+font-size:18px;
+color:#fff;
+letter-spacing:-2px
+}
+
+h3 a {
+color:#fff;
+text-decoration:none
+}
+
+h3 a:hover {
+color:#fff;
+text-decoration:underline
+}
+
+h4 {
+font-size:12px;
+color:#aaa;
+letter-spacing:-1px;
+padding-bottom:10px
+}
+
+.postfooter {
+font-size:12px;
+color:#aaa;
+letter-spacing:-1px;
+padding-top:10px
+}
+
+.post {
+font-size:12px;
+color:#ddd;
+letter-spacing:-1px;
+margin-bottom:40px;
+overflow:hidden;
+}
+
+#TagList,#about {
+font-size:12px;
+color:#ddd;
+letter-spacing:-1px
+}
+
+#left {
+width:550px;
+float:left;
+margin-right:30px
+}
+
+#right {
+width:270px;
+float:left
+}
+
+.rightpanel,.rightpanel a {
+margin-bottom:40px;
+font-size:12px;
+color:#ddd;
+letter-spacing:-1px
+}
+
+#alertbox {
+width:510px;
+background-color:#2e490d;
+color:#fff;
+text-align:center;
+margin-bottom:20px;
+padding:20px;
+font-size:18px;
+color:#fff;
+letter-spacing:-2px
+}
+
+#txtsearch {
+border:1px solid #000;
+width:200px
+}
+
+.btn {
+border:1px solid #000;
+background-color:#CCC;
+margin-left:3px;
+font-size:12px;
+color:#000;
+padding:2px
+}
+
+.ImageHolder {
+height:130px;
+width:200px;
+margin:33px 1px 1px
+}
+
+.page-number,.pgNext {
+color:#fff
+}
+
+.formstyle {
+width:500px;
+border:1px solid #000;
+margin-bottom:8px;
+padding:5px
+}
+
+.commentname {
+margin-bottom:8px
+}
+
+.commentbody {
+width:500px;
+border-bottom:dashed 1px #555;
+margin-bottom:16px;
+padding-bottom:8px
+}
+
+.commentname,.commentdate,label
+{
+font-size:12px;
+color:#aaa;
+letter-spacing:-1px;
+font-weight:700;
+}
+
+.commentbody
+{
+font-size:12px;
+color:#fff;
+letter-spacing:-1px;
+font-weight:700;
+}
+
+.commentdate {
+margin-bottom:8px;
+}
+
+#CommentFormHolder
+{
+color:#ccc;
+}
+
+#CommentFormHolder h5
+{
+padding-top:20px;
+padding-bottom:20px;
+}
+
+#ChannelItems {
+width:250px;
+
+
+}
+
+#ChannelItems li
+{
+padding-bottom:20px;
+}
+
+#ChannelItems li a
+{
+text-decoration:none;
+}
+
+#ChannelItems li a:hover
+{
+text-decoration:underline;
+}
+
+#channelitems li {
+list-style-type:none;
+
+}
+
+#channelitems li img {
+padding-right:10px;
+}
+
+h4 a,.postfooter a {
+color:#aaa
+}

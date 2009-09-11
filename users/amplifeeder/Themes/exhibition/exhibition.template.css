@@ -1,0 +1,110 @@
+﻿body {
+margin:0;
+padding:0;
+font-size:90%;
+font-family:Helvetica, Verdana, Geneva, Arial, sans-serif;
+letter-spacing: -0.05em;
+}
+
+#header, #footer
+{
+background-color:#000;
+color:White;
+}
+
+#header
+{
+padding-top:40px;
+padding-bottom:20px;
+}
+
+h1
+{
+font-size:3em;
+margin:0;
+padding:0;
+}
+
+h1 a
+{
+text-decoration:none;
+color:White;
+}
+
+h2
+{
+margin:0;
+padding:0;
+}
+
+#content, #titles, #footertext
+{
+width:1000px;
+margin-left:auto;
+margin-right:auto;
+}
+
+.itemcontent, .itemtop, h2
+{
+font-size:1.4em;	
+}
+
+.item
+{
+border-bottom:solid 1px black;
+padding-top:10px;
+padding-bottom:10px;
+float:left;
+}
+
+.itemtop
+{
+padding-top:30px;
+padding-bottom:30px;
+border-bottom:solid 1px black;
+font-weight:700;
+}
+
+#footertext
+{
+font-size:1.2em;	
+}
+
+.channelbutton
+{
+border:0;
+}
+
+#footer
+{
+margin-top:60px;
+padding-top:40px;
+padding-bottom:40px;
+}
+
+#footer a
+{
+color:White;
+
+}
+
+.itemcontent
+{
+width:815px;
+padding-right:30px;
+float:left;
+}
+
+.meta
+{
+width:100px;
+float:left;
+padding-right:30px;
+}
+
+.icon
+{
+width:20px;
+float:left;
+}
+

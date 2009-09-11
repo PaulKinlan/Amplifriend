@@ -1,0 +1,163 @@
+﻿ <div id="TemplateSettings">
+     <div id="PageSize">10</div>
+   </div>
+   <div id="MasterTemplate" >
+		<div id="header">
+			<div class="alligner">
+				<div id="topline">
+					<div id="label"><img src="/Themes/shadowplay/img/img_03.png" alt="" /></div>
+					<div id="link"><a href="http://www.amplifeeder.com"><img src="/Themes/shadowplay/img/img_04.png" alt="" /></a></div>
+				</div>
+				<div id="bottomline">
+					<div id="logoblock">
+						<div id="logo"><a href="Default.aspx"><img src="/Themes/shadowplay/img/img_07.png" alt="" /></a></div>
+						<div id="logopad"><img src="/Themes/shadowplay/img/img_10.png" alt="" /><a href="Feed.aspx"><img src="/Themes/shadowplay/img/img_11.png" alt="" /></a></div>
+					</div>
+					<div id="rssblock">
+						<div id="rsspad"><img src="/Themes/shadowplay/img/img_08.png" alt="" /></div>
+						<div id="rssicon"><a href="Feed.aspx"><img src="/Themes/shadowplay/img/img_09.png" alt="" /></a></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="bannerstrip">
+			<div id="banner" class="alligner"><img src="/Themes/shadowplay/img/img_12.png" alt="" /></div>
+		</div>
+		<div id="content" class="alligner clearfix">
+			<div id="items">
+			    <div id="alertbox" >hello</div>
+                <div id="TemplateItemsHolder" />
+                <div id="pager" />
+				
+				
+			</div>
+			<div id="controls">
+			    <img src="/Themes/shadowplay/img/img_15.png" alt="" />
+				<div id="controlholder">
+
+                    <h3>Search</h3>
+				    <div id="Search" />
+                    <h3 class="controlheader">About Me</h3>
+                    <div id="about" />
+                    <h3 class="controlheader">Channels</h3>
+				    <div id="channels" />
+				    <h3 class="controlheader">Pages</h3>
+				    <div id="pages" />
+                    <h3 class="controlheader">Tags</h3>
+				    <div id="TagList" />
+				</div>
+		    </div>
+		</div>
+		<div id="footerstrip">
+			<div id="footer" class="alligner">
+                This site is powered by <a href="http://www.amplifeeder.com">AmpliFeeder</a>, an open source lifestream platform by <a href="http://www.j-dee.com">Jon Paul Davies</a>.
+                AmpliFeeder is available under the <a href="http://www.fsf.org/licensing/licenses/agpl-3.0.html">GNU Affero General Public License</a> (or AGPL for short),a version of the <a href="http://www.gnu.org/licenses/gpl.html">GNU GPL</a> designed specifically for web applications.
+
+                All trademarks, slogans, text or logo represented, used or infered to on this site are the property of their respective owners.
+            </div>
+		</div>
+</div>
+
+<div id="ItemTemplates">
+
+    <div class="ItemTemplate Twitter Flickr Digg YouTube Delicious CustomRSS20 CustomAtom Stumbleupon Reddit GoogleReader Mixx Upcoming Tumblr Vimeo Picasa" >
+
+        <div class="item">
+            <div class="icon">
+                <img src="/{{user.username}}/Assets/img/icons/24/${SourceTypeName}.png" alt="" />
+            </div>
+            <div class="detail">
+                <div class="posted">
+                    Posted on <a onclick="window.location = 'Detail.aspx?id=${Id}';" href="#">${SourceTitle}</a>
+                </div>
+                <div class="title">
+                    ${Title}
+                </div>
+                <hr />
+                <div class="itemfooter">
+                    ${PrettyDate} | <img src="/Themes/shadowplay/img/permalink.jpg" alt="" /> <a onclick="window.open('${SourceLink}');" href="#">Permalink</a> | <a onclick="window.location='Detail.aspx?id=${Id}';" href="#">${CommentCount} Comment(s)</a>
+                </div>
+                &nbsp;
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="ItemTemplate Microblog" >
+
+        <div class="item">
+            <div class="icon">
+                <img src="/{{user.username}}/Assets/img/icons/24/${SourceTypeName}.png" alt="" />
+            </div>
+            <div class="detail">
+                <div class="posted">
+                    Posted on <a onclick="window.location = 'Detail.aspx?id=${Id}';" href="#">${SourceTitle}</a>
+                </div>
+                <div class="title">
+                    ${Title}
+                </div>
+                <hr />
+                <div class="itemfooter">
+                    ${PrettyDate} | <a onclick="window.location='Detail.aspx?id=${Id}';" href="#">${CommentCount} Comment(s)</a>
+                </div>
+                &nbsp;
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="ItemTemplate LastFM" >
+
+        <div class="item">
+            <div class="icon">
+                <img src="/{{user.username}}/Assets/img/icons/24/${SourceTypeName}.png" alt="" />
+            </div>
+            <div class="detail">
+                <div class="posted">
+                    Posted on <a onclick="window.location = 'Detail.aspx?id=${Id}';" href="#">${SourceTitle}</a>
+                </div>
+                <div class="title">
+                    ${Title} - ${Description}
+                </div>
+                <hr />
+                <div class="itemfooter">
+                    ${PrettyDate} | <img src="/Themes/shadowplay/img/permalink.jpg" alt="" /> <a onclick="window.open('${SourceLink}');" href="#">Permalink</a> | <a onclick="window.location = 'Detail.aspx?id=${Id}';" href="#">${CommentCount} Comment(s)</a>
+                </div>
+                &nbsp;
+            </div>
+        </div>
+    </div>
+
+  <div class="ItemTemplate Facebook Brightkite" >
+
+    <div class="item">
+      <div class="icon">
+        <img src="/{{user.username}}/Assets/img/icons/24/${SourceTypeName}.png" alt="" />
+      </div>
+      <div class="detail">
+        <div class="posted">
+          Changed status on <a onclick="window.location = 'Detail.aspx?id=${Id}';" href="#">${SourceTitle}</a>
+        </div>
+        <div class="title">
+          ${Title}
+        </div>
+        <hr />
+        <div class="itemfooter">
+          ${PrettyDate} | <img src="/Themes/shadowplay/img/permalink.jpg" alt="" /> <a onclick="window.open('${SourceLink}');" href="#">Permalink</a> | <a onclick="window.location = 'Detail.aspx?id=${Id}';" href="#">${CommentCount} Comment(s)</a>
+        </div>
+        &nbsp;
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div id="ChannelTemplate">
+        <img class="channelbutton" id="${Id}" alt="all ${Title} posts" src="/{{user.username}}/Assets/img/icons/24/${SourceTypeName}.png" />
+</div>
+
+<div id="ItemTypeTemplate">
+        <img class="channelbutton" id="${Id}" alt="all ${Title} posts" src="/{{user.username}}/Assets/img/icons/24/${SourceTypeName}.png" />
+</div>

@@ -1,0 +1,368 @@
+﻿ <div id="TemplateSettings">
+     <div id="PageSize">12</div>
+   </div>
+   <div id="MasterTemplate" >
+    <div id="header">
+        
+    </div>
+    <div id="container">
+        <div id="columns">
+            <div id="leftcolumn">
+                <h1 id="title">
+                    </h1>
+                <h2 id="tagline"></h2>
+                <h2 id="about"></h2>
+                <h2>
+                    Channels</h2>
+
+                <div id="channels" />
+ <h2>
+                    Pages</h2>
+
+                <div id="pages" />
+
+                 <h2>
+                    Search</h2>
+              <div id="Search" />
+                    <h2 id="tagtitle">
+                        
+                    Tags</h2>
+                <div id="TagList" />
+              <a  href="Feed.aspx">
+                <img id="feed" src="/Themes/transmission/rssicon.png" />
+              </a>
+            </div>
+            <div id="rightcolumn">
+                <div id="alertbox" >hello</div>
+                
+                <div id="TemplateItemsHolder" />
+                <div id="pager" />
+		   </div>
+        </div>
+        <br style="clear:both;float:none;" />
+    </div>
+    <div id="footer">
+        This site is powered by <a href="http://www.amplifeeder.com">AmpliFeeder</a>, an open source lifestream platform by <a href="http://www.j-dee.com">Jon Paul Davies</a>.
+        AmpliFeeder is available under the <a href="http://www.fsf.org/licensing/licenses/agpl-3.0.html">GNU Affero General Public License</a> (or AGPL for short),a version of the <a href="http://www.gnu.org/licenses/gpl.html">GNU GPL</a> designed specifically for web applications.
+
+        All trademarks, slogans, text or logo represented, used or infered to on this site are the property of their respective owners.
+    </div>
+		</div>
+		  <div id="ItemTemplates">
+		  
+		  
+		      <div class="item ItemTemplate Twitter">
+            <div class="Template">
+                    <h3>
+                        ${PrettyDate}
+                    </h3>
+                    <div class="icon">
+                        <img height="18px" width="18px" src="/{{user.username}}/Assets/img/icons/24/${SourceTypeName}.png" /></div>
+                    <div class="action">
+                        Posted a tweet on <a onclick="window.open('${SourceLink}');" href="#">${SourceTitle}</a>
+                    </div>
+                    <div class="content">
+                        ${Title}
+                    </div>
+                    
+            </div>
+                </div>
+
+
+        <div class="item ItemTemplate Flickr">
+          <div class="Template">
+            <h3>
+              ${PrettyDate}
+            </h3>
+            <div class="icon">
+              <img height="18px" width="18px" src="/{{user.username}}/Assets/img/icons/24/${SourceTypeName}.png" />
+            </div>
+            <div class="action">
+              Uploaded a picture titled '${Title}' to <a onclick="window.open('${SourceLink}');" href="#">${SourceTitle}</a>
+            </div>
+            <div class="content">
+              <div class="ImageHolder" style="background: url(${ItemContentPreview})">
+              </div>
+            </div>
+            
+          </div>
+        </div>
+
+
+
+        
+
+      <div class="item ItemTemplate Picasa">
+          <div class="Template">
+              <h3>
+                  ${PrettyDate}
+              </h3>
+              <div class="icon">
+                  <img height="18px" width="18px" src="/{{user.username}}/Assets/img/icons/24/${SourceTypeName}.png" />
+              </div>
+              <div class="action">
+                  Created a web photo album titled '${Title}' on <a onclick="window.open('${SourceLink}');" href="#">${SourceTitle}</a>
+              </div>
+              <div class="content">
+                  <div class="ImageHolder" style="background: url(${ItemContentPreview})">
+                  </div>
+              </div>
+
+          </div>
+      </div>
+
+
+        <div class="item ItemTemplate LastFM">
+          <div class="Template">
+            <h3>
+              ${PrettyDate}
+            </h3>
+            <div class="icon">
+              <img height="18px" width="18px" src="/{{user.username}}/Assets/img/icons/24/${SourceTypeName}.png" />
+            </div>
+            <div class="action">
+              Listened to ${Title} - ${Description} on <a onclick="window.open('${SourceLink}');" href="#">${SourceTitle}</a>
+            </div>
+           
+          </div>
+        </div>
+
+
+
+        <div class="item ItemTemplate Digg">
+          <div class="Template">
+            <h3>
+              ${PrettyDate}
+            </h3>
+            <div class="icon">
+              <img height="18px" width="18px" src="/{{user.username}}/Assets/img/icons/24/${SourceTypeName}.png" />
+            </div>
+            <div class="action">
+              Dugg '${Title}' on <a onclick="window.open('${SourceLink}');" href="#">${SourceTitle}</a>
+            </div>
+             
+          </div>
+        </div>
+
+        <div class="item ItemTemplate Facebook">
+          <div class="Template">
+            <h3>
+              ${PrettyDate}
+            </h3>
+            <div class="icon">
+              <img height="18px" width="18px" src="/{{user.username}}/Assets/img/icons/24/${SourceTypeName}.png" />
+            </div>
+            <div class="action">
+              Changed status to '${Title}' on <a onclick="window.open('${SourceLink}');" href="#">${SourceTitle}</a>
+            </div>
+
+          </div>
+        </div>
+
+
+              <div class="item ItemTemplate Brightkite">
+                  <div class="Template">
+                      <h3>
+                          ${PrettyDate}
+                      </h3>
+                      <div class="icon">
+                          <img height="18px" width="18px" src="/{{user.username}}/Assets/img/icons/24/${SourceTypeName}.png" />
+                      </div>
+                      <div class="action">
+                          Updated <a onclick="window.open('${SourceLink}');" href="#">${SourceTitle}</a> with '${Title}'
+                      </div>
+
+                  </div>
+              </div>
+
+
+        <div class="item ItemTemplate YouTube">
+          <div class="Template">
+            <h3>
+              ${PrettyDate}
+            </h3>
+            <div class="icon">
+              <img height="18px" width="18px" src="/{{user.username}}/Assets/img/icons/24/${SourceTypeName}.png" />
+            </div>
+            <div class="action">
+              Added a video titled '${Title}' to my favorites on <a onclick="window.open('${SourceLink}');" href="#">${SourceTitle}</a>
+            </div>
+            <div class="content">
+              ${Data}
+            </div>
+            
+          </div>
+        </div>
+
+
+          <div class="item ItemTemplate Vimeo">
+              <div class="Template">
+                  <h3>
+                      ${PrettyDate}
+                  </h3>
+                  <div class="icon">
+                      <img height="18px" width="18px" src="/{{user.username}}/Assets/img/icons/24/${SourceTypeName}.png" />
+                  </div>
+                  <div class="action">
+                      Added a video titled '${Title}' to <a onclick="window.open('${SourceLink}');" href="#">${SourceTitle}</a>
+                  </div>
+                  <div class="content">
+                      ${Data}
+                  </div>
+
+              </div>
+          </div>
+
+        <div class="item ItemTemplate Delicious">
+          <div class="Template">
+            <h3>
+              ${PrettyDate}
+            </h3>
+            <div class="icon">
+              <img height="18px" width="18px" src="/{{user.username}}/Assets/img/icons/24/${SourceTypeName}.png" />
+            </div>
+            <div class="action">
+              Bookmarked '${Title}' on <a onclick="window.open('${SourceLink}');" href="#">${SourceTitle}</a>
+            </div>
+            
+          </div>
+        </div>
+
+        <div class="item ItemTemplate CustomRSS20 CustomAtom">
+          <div class="Template">
+            <h3>
+              ${PrettyDate}
+            </h3>
+            <div class="icon">
+              <img height="18px" width="18px" src="/{{user.username}}/Assets/img/icons/24/${SourceTypeName}.png" />
+            </div>
+            <div class="action">
+              Viewed an article title '${Title}' from <a onclick="window.open('${SourceLink}');" href="#">${SourceTitle}</a>
+            </div>
+            <div class="content">
+              ${Description}
+            </div>
+            
+          </div>
+        </div>
+
+        <div class="item ItemTemplate Stumbleupon">
+          <div class="Template">
+            <h3>
+              ${PrettyDate}
+            </h3>
+            <div class="icon">
+              <img height="18px" width="18px" src="/{{user.username}}/Assets/img/icons/24/${SourceTypeName}.png" />
+            </div>
+            <div class="action">
+              Stumbled '${Title}' on <a onclick="window.open('${SourceLink}');" href="#">${SourceTitle}</a>
+            </div>
+           
+          </div>
+        </div>
+
+        <div class="item ItemTemplate Reddit Mixx">
+          <div class="Template">
+            <h3>
+              ${PrettyDate}
+            </h3>
+            <div class="icon">
+              <img height="18px" width="18px" src="/{{user.username}}/Assets/img/icons/24/${SourceTypeName}.png" />
+            </div>
+            <div class="action">
+              Posted '${Title}' to <a onclick="window.open('${SourceLink}');" href="#">${SourceTitle}</a>
+            </div>
+           
+          </div>
+        </div>
+
+        <div class="item ItemTemplate GoogleReader">
+          <div class="Template">
+            <h3>
+              ${PrettyDate}
+            </h3>
+            <div class="icon">
+              <img height="18px" width="18px" src="/{{user.username}}/Assets/img/icons/24/${SourceTypeName}.png" />
+            </div>
+            <div class="action">
+              Shared this article called '${Title}' from <a onclick="window.open('${SourceLink}');" href="#">${SourceTitle}</a>
+            </div>
+            <div class="content">
+              ${Description}
+            </div>
+            
+          </div>
+        </div>
+
+
+        <div class="item ItemTemplate Upcoming">
+          <div class="Template">
+            <h3>
+              ${PrettyDate}
+            </h3>
+            <div class="icon">
+              <img height="18px" width="18px" src="/{{user.username}}/Assets/img/icons/24/${SourceTypeName}.png" />
+            </div>
+            <div class="action">
+              Bookmarked an upcoming event: ${Title}. Found on <a onclick="window.open('${SourceLink}');" href="#">${SourceTitle}</a>
+            </div>
+            <div class="content">
+              ${Description}
+            </div>
+
+          </div>
+        </div>
+
+
+        <div class="item ItemTemplate Tumblr">
+          <div class="Template">
+            <h3>
+              ${PrettyDate}
+            </h3>
+            <div class="icon">
+              <img height="18px" width="18px" src="/{{user.username}}/Assets/img/icons/24/${SourceTypeName}.png" />
+            </div>
+            <div class="action">
+              Posted '${Title}' to <a onclick="window.open('${SourceLink}');" href="#">${SourceTitle}</a>
+            </div>
+            <div class="content">
+              ${Description}
+            </div>
+
+          </div>
+        </div>
+        
+
+        <div class="item ItemTemplate Microblog">
+          <div class="Template">
+            <h3>
+              ${PrettyDate}
+            </h3>
+            <div class="icon">
+              <img height="18px" width="18px" src="/{{user.username}}/Assets/img/icons/24/${SourceTypeName}.png" />
+            </div>
+            <div class="action">
+              Published a post named '${Title}' on my ${SourceTitle}
+            </div>
+            <div class="content">
+              ${Description}
+            </div>
+            
+          </div>
+        </div>
+
+
+      </div>
+<div id="ChannelTemplate">
+  <div class="channel" id="${Id}">
+    <img class="channelbutton" id="${Id}" alt="all ${Title} posts" src="/{{user.username}}/Assets/img/icons/24/${SourceTypeName}.png" />${Title}
+    <br style="clear:both;float:none;" />
+  </div>
+  </div>
+  
+  <div id="ItemTypeTemplate">
+  <div class="channel" id="${Id}">
+    <img class="channelbutton" id="${Id}" alt="all ${Title} posts" src="/{{user.username}}/Assets/img/icons/24/${SourceTypeName}.png" />${Title}
+    <br style="clear:both;float:none;" />
+  </div>
+  </div>

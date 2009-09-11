@@ -1,0 +1,144 @@
+*
+{
+	margin:0;
+	padding:0;
+	font-size: 12px;
+	color: #5a5a5a;	
+	font-family: arial, sans-serif;
+	line-height:1;
+	
+}
+
+body
+{
+padding-top:30px;
+}
+
+#container
+{
+	width:100%;
+	text-align:center;
+}
+
+#header
+{
+	text-align:left;
+	width:1000px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+#content
+{
+	width:1000px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+#left
+{
+	width:700px;
+	float:left;
+	text-align:left;
+}
+
+#right
+{
+	padding-left:30px;
+	width:270px;
+	float:left;
+	text-align:left;
+}
+
+
+h1 a
+{
+	font-size: 42px;
+	text-decoration:none;
+}
+
+h2
+{
+	font-size:20px;
+	padding-bottom:30px;
+}
+h3
+
+{
+	font-size: 12px;
+}
+
+table
+{
+	width:700px;
+	border:1px solid #dedddb;
+}
+
+.date
+{
+	text-align:center;
+	font-weight:700;
+	padding:5px 15px 5px 15px;
+
+}
+
+.day
+{
+	font-size: 18px;
+}
+
+.month
+{
+	font-size: 12px;
+}
+
+.year
+{
+	font-size: 9px;
+}
+
+.itemcontent
+{	
+	float:left;
+	padding-left:15px;
+	padding-right:15px;
+	color:#4365B1;
+
+}
+
+.alt
+{
+	background-color:#f1f1f0;
+}
+
+.spacer
+{
+	background-image: url("sigborder.png");
+	text-align:right;
+	background-position: right;
+	background-repeat: repeat-y;
+}
+
+#footer
+{
+	text-align:left;
+	border-top:30px solid white;
+}
+
+.rightitem
+{
+padding-bottom:20px;
+}
+
+#txtsearch {
+border: 1px solid #000;
+width:240px;
+}
+
+.btn {
+border: 1px solid #000;
+background-color:#CCC;
+padding:2px;
+margin-left:3px;
+font-weight:bold;
+}

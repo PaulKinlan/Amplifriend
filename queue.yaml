@@ -1,0 +1,3 @@
+queue:
+- name: EmailNewUser
+  rate: 10/m
