@@ -10,6 +10,12 @@ indexes:
 # automatically uploaded to the admin console when you next deploy
 # your application using appcfg.py.
 
+# Used 3 times in query history.
+- kind: Friends
+  properties:
+  - name: username
+  - name: count
+
 # Unused in query history -- copied from input.
 - kind: SubscriptionUpdateOwnerIndex
   properties:
@@ -24,7 +30,7 @@ indexes:
   - name: added_on
     direction: desc
 
-# Unused in query history -- copied from input.
+# Used 2 times in query history.
 - kind: SubscriptionUpdateReaderIndex
   properties:
   - name: users

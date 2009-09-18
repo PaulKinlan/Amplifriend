@@ -22,6 +22,10 @@ class CreateFriendHandler(webapp.RequestHandler):
 		user = self.SessionObj.user
 		friend_obj = model.User.Get(friend)
 		
+		if friend_obj is None:
+			self.redirect(self.request.headers['referer'])
+			return
+		
 		model.Friends.AddFriend(user, friend_obj)
 		
 		try:
@@ -32,6 +36,7 @@ class CreateFriendHandler(webapp.RequestHandler):
 		except:
 			logging.info("Failed to send Create friendship  Email to %s: %s" % (username, friend))
 		
+		self.redirect(self.request.headers['referer'])
 		
 		
 		

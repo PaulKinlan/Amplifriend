@@ -122,7 +122,7 @@ class Friends(BaseModel):
 		
 		if friends is None:
 			# There might be some transactional weirdness here so might need to watch out.
-			friends = Friends(username = username, parent = user)
+			friends = Friends(username = user.username, parent = user)
 		
 		friends.users.append(friend.key())
 		friends.count = len(friends.users)
@@ -135,17 +135,23 @@ class Friends(BaseModel):
 		
 		Todo: use the limit to workout the offset.
 		"""	
+		friends = []
+		
 		if offset is None:
-			friends = db.Query(Friends, keys_only = True).filter("user =", user.username).get()
+			friends = db.Query(Friends).filter("username =", user.username).fetch(limit)
 		else:
 			if type(offset) == type(str):
 				offset = db.Key(offset)
-			friends = db.Query(Friends, keys_only = True).filter("user =", user.username).filter("__key__ >", offset).get()
-
-		if friends is None:
-			return []
+			friends = db.Query(Friends).filter("username =", user.username).filter("__key__ >", offset).get(limit)
+			
 		# Get people who I have friended
-		return db.get([friend for friend in friends.users])
+		all_friends = []
+		
+		[all_friends.extend(friend.users) for friend in friends]
+		
+		logging.info(all_friends)
+		
+		return db.get(all_friends)
 
 	@staticmethod
 	def GetFriended(user, limit = 10, offset = None):
