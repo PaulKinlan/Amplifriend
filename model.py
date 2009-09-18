@@ -149,7 +149,6 @@ class Friends(BaseModel):
 		
 		[all_friends.extend(friend.users) for friend in friends]
 		
-		logging.info(all_friends)
 		
 		return db.get(all_friends)
 
