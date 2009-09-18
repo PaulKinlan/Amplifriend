@@ -17,6 +17,16 @@ class CreateFriendHandler(webapp.RequestHandler):
 	@webdecorators.session
 	@webdecorators.authorize("/session/create")
 	def post(self, username):
+		"""
+		Subscribe to a users owned feeds.
+
+		Because this is a multi-tenant system the subscription might already exist so be aware of that - but hey it is ok.
+
+		If the current user is the user of this handler, then we are subscribing to an external feed.
+		If the current user is NOT the user of this handler then we are subscribing to a users subscriptions.
+
+		"""
+		
 		friend = self.request.get("friend")
 		
 		user = self.SessionObj.user
@@ -28,6 +38,12 @@ class CreateFriendHandler(webapp.RequestHandler):
 		
 		model.Friends.AddFriend(user, friend_obj)
 		
+		# Get a list of all the subscriptions of whom we will subscribe the current user to
+		subs = friend_obj.GetOwnedSubscriptions()
+
+		for sub in subs:
+			sub.AddReader(username)
+		
 		try:
 			Task(url = "/queue/email/createfriendship", params = {
 				"user_a" : username,
@@ -37,6 +53,5 @@ class CreateFriendHandler(webapp.RequestHandler):
 			logging.info("Failed to send Create friendship  Email to %s: %s" % (username, friend))
 		
 		self.redirect(self.request.headers['referer'])
-		
 		
 		

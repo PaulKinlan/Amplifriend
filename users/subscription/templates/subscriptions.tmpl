@@ -39,13 +39,17 @@ tbody tr:hover 	{}
     <div class="container_16" id="boos">
         <div class="grid_10">
 			<div style="padding:15px;">
-				<h1>Your Subscriptions</h1>
+				<h1>Your Content</h1>
 				<p>This is a list of all the content that you produce or share</p>
 				<table>
-				{% for subscription in subscriptions%}
+				{% for subscription in subscriptions %}
 				<tr>
 					<td>{{ subscription.link }}</td>
-					<td><form action="/{{user.username}}/subscription/delete" method="post"><input type="hidden" name="url" value="{{subscription.link}}" /><input type="submit" value="Unsubscribe" /></form></td>
+					<td>
+						<form action="/{{user.username}}/subscription/delete" method="post">
+							<input type="hidden" name="url" value="{{subscription.link}}" /><input type="submit" value="Unsubscribe" />
+						</form>
+					</td>
 				</tr>
 				{% endfor %}
 				</table>

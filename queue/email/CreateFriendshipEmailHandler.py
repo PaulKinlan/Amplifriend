@@ -1,4 +1,5 @@
 from google.appengine.ext import webapp
+from google.appengine.api import mail
 
 import model
 import templates

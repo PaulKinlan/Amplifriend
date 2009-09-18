@@ -1,4 +1,5 @@
 from google.appengine.ext import webapp
+from google.qppengine.api import mail
 
 import model
 import templates
