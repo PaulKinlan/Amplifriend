@@ -23,8 +23,11 @@ class CreateFriendHandler(webapp.RequestHandler):
 		Because this is a multi-tenant system the subscription might already exist so be aware of that - but hey it is ok.
 
 		If the current user is the user of this handler, then we are subscribing to an external feed.
-		If the current user is NOT the user of this handler then we are subscribing to a users subscriptions.
-
+		
+		Friendships are created internally so that there is no publishing on the current node is required.  
+		Normally I would do this all pubsub based, but I don't think internally it would scale very well, but I might have too.
+		
+		When the friended user adds a feed all other users must then be readers of this (should be pretty quick)
 		"""
 		
 		friend = self.request.get("friend")
@@ -40,7 +43,6 @@ class CreateFriendHandler(webapp.RequestHandler):
 		
 		# Get a list of all the subscriptions of whom we will subscribe the current user to
 		subs = friend_obj.GetOwnedSubscriptions()
-
 		for sub in subs:
 			sub.AddReader(username)
 		

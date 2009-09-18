@@ -203,18 +203,7 @@ class CreateSubscriptionHandler(webapp.RequestHandler):
 			logging.info("Hub: %s" % hub)
 			subscription.hub = hub
 			subscription.put()
-			
-			# Now that we have the hub subscribe to it. SPEC 6.1
-			# Sync subscription because I would like to let the user know that it is ok straight away.
-			#payload = urllib.urlencode(
-			#	{
-			#		"hub.mode" : "subscribe",
-			#		"hub.callback" : "http://amplifriend-app.appspot.com/subscription/%s" % subscription.key().name(),
-			#		"hub.topic" : urllib.quote(subscription_url),
-			#		"hub.verify" : "sync",
-			#		"hub.verify_token": "Something Better and maybe session based."
-			#	})
-				
+							
 			payload = "hub.mode=subscribe&hub.callback=http://amplifriend-app.appspot.com/subscription/%s&hub.topic=%s&hub.verify=sync&hub.verify_token=Something" % (subscription.key().name(), urllib.quote(subscription_url))
 			
 			logging.info("Payload %s" % payload)
@@ -231,6 +220,13 @@ class CreateSubscriptionHandler(webapp.RequestHandler):
 		# for instance I might like a feed an want to re-syndicate it.
 		owners = model.SubscriptionOwners.Get(subscription)
 		owners.AddOwner(username)
+		
+		# The current user might have many subscribers so we need to make them all follow this new feed.  This might need to be a task (in fact it will have to, what happens if a million people love me)
+		friends = model.Friends.GetFriended(user, 100)
+		
+		readers = model.SubscriptionReaders.Get(subscription)
+		for friend in friends:
+			readers.AddReader(friend.username)
 		
 		# Send the user back to whence they came
 		self.redirect(self.request.headers['referer'])

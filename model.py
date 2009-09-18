@@ -87,6 +87,7 @@ class User(BaseModel):
 		subscriptions = db.Query(SubscriptionReaders).filter("users =", self.username).fetch(100)
 
 		return db.get([sub.parent_key() for sub in subscriptions ])
+
 		
 class Friends(BaseModel):
 	"""
@@ -237,6 +238,14 @@ class Subscription(BaseModel):
 			link = feed
 		 )
 		
+	def AddReader(self, username):
+		"""
+		Adds a reader to the subscription
+		"""
+		reader = SubscriptionReaders.Get(self)
+
+		reader.AddReader(username)
+		
 class SubscriptionOwners(BaseModel):
 	"""
 	It is possible that a subscription might have several owners
@@ -260,6 +269,9 @@ class SubscriptionOwners(BaseModel):
 				key_name = "sub_owner_%s" % hashlib.sha1(subscription.link).hexdigest(),
 				parent = subscription
 			 )
+			
+
+	
 	
 class SubscriptionReaders(BaseModel):
 	"""
@@ -274,7 +286,7 @@ class SubscriptionReaders(BaseModel):
 	def AddReader(self, username):
 		username = username.lower()
 		if username not in self.users:
-			users.append(username)
+			self.users.append(username)
 			self.put()
 			
 	def AddReaders(self, users):
