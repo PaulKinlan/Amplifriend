@@ -36,3 +36,8 @@ indexes:
   - name: users
   - name: added_on
     direction: desc
+
+- kind: Friends
+  properties:
+  - name: username
+  - name: count
