@@ -1,2 +1,2 @@
-from CreateUserEmailHandler import CreateUserImportHandler
-from CreateFriendshipEmailHandler import CreateFriendshipHandler
+from CreateUserEmailHandler import CreateUserEmailHandler
+from CreateFriendshipEmailHandler import CreateFriendshipEmailHandler

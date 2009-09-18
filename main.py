@@ -4,6 +4,7 @@ import users
 import sub
 import session
 import service
+import queue
 
 import templates
 import model
