@@ -6,7 +6,6 @@
 	<h1>Services</h1>
 	<tr>
 		<td>Name</td>
-		<td>Url</td>
 		<td>Parser</td>
 		<td>Action</td>
 	</tr>
@@ -14,7 +13,6 @@
 	{% for service in services %}
 	<tr>
 		<td>{{service.name}}</td>
-		<td>{{service.url}}</td>
 		<td>{{service.parser}}</td>
 		<td>
 			<form method="post" action="/services/delete">

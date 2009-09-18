@@ -19,6 +19,19 @@ class CreateFriendHandler(webapp.RequestHandler):
 	def post(self, username):
 		friend = self.request.get("friend")
 		
+		user = self.SessionObj.user
+		friend_obj = model.User.Get(friend)
+		
+		model.Friends.AddFriend(user, friend_obj)
+		
+		try:
+			Task(url = "/queue/email/createfriendship", params = {
+				"user_a" : username,
+				"user_b" : friend
+			}).add('EmailNewUser')
+		except:
+			logging.info("Failed to send Create friendship  Email to %s: %s" % (username, friend))
+		
 		
 		
 		

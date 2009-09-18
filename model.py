@@ -186,7 +186,6 @@ class Service(BaseModel):
 	For instance Flickr will take a flickr username (N123123123@01) and map that to a URL.
 	"""
 	name = db.StringProperty() # A friendly name
-	url = db.StringProperty() # A url of the feed endpoint contains escape chars such as %s
 	parser = db.StringProperty() # The python module that will construct the URL from the value supplied the URL and maybe some other stuff
 	
 	@staticmethod

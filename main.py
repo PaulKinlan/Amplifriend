@@ -44,6 +44,10 @@ def main():
 		('/session/expire', session.ExpireSessionHandler),
 		('/session/invalid', session.InvalidSessionHandler),
 		
+		# Queue Handlers
+		('/queue/email/createfriendship', queue.email.CreateFriendshipEmailHandler),
+		('/queue/email/createuser', queue.email.CreateUserEmailHandler),
+		
 		# TODO: Amplifeeder handlers go here. refactor later.
 		(r'/([^/]+)/AssetCombiner\.ashx', users.amplifeeder.AssetCombinerHandler),
 		(r'/([^/]+)/Themes/(.+)', users.amplifeeder.ThemeHandler),

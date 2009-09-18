@@ -34,7 +34,7 @@ class CreateUserHandler(webapp.RequestHandler):
 		user = model.User.Create(username, password, email)
 		
 		try:
-			Task(url = "/queues/email/createuser", params = {
+			Task(url = "/queue/email/createuser", params = {
 				"email" : email
 			}).add('EmailNewUser')
 		except:

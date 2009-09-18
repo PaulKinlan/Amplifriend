@@ -1,6 +1,7 @@
 from google.appengine.ext import webapp
 from google.appengine.api import urlfetch
 from google.appengine.api import memcache
+from google.appengine.runtime import apiproxy_errors
 
 import urllib
 import logging
@@ -159,9 +160,12 @@ class CreateSubscriptionHandler(webapp.RequestHandler):
 			self.redirect('/')
 			return
 			
+		logging.info("Service: %s" % service_type)
+			
 		if service_type != "":
 			# If the user has selected a particular serivce (such as twitter try and convert it)
-			factory = service.parser.Factory.Create(service_type)
+			srvc = model.Service.GetByKey(service_type)
+			factory = service.parser.Factory.Create(srvc.name)
 			url = factory.Parse(url, service_type )
 			
 		subscription = model.Subscription.Create(url)
@@ -174,9 +178,11 @@ class CreateSubscriptionHandler(webapp.RequestHandler):
 			subscription_url = None
 			title = ""
 			
-			if urls == []:
-				# The feed doesn't have pubsub, so poll it (currently ping superfeeder)
-				hub = "http://superfeedr.com/hubbub"
+			logging.info(urls)
+			
+			if urls == [] or urls is None:
+				# The feed doesn't have pubsub, so poll it
+				hub = "http://www.amplifriend.com/%s/hub" % username
 				subscription_url = url
 			else:	
 				for url in urls:
@@ -190,12 +196,14 @@ class CreateSubscriptionHandler(webapp.RequestHandler):
 					if hub is None:
 						# If there is no hub, connect to our one (To come.)
 						logging.error("There is no hub at %s" % url)
+						hub = "http://www.amplifriend.com/%s/hub" % username
 					else:
 						logging.info("Found %s" % subscription_url)
 						break
 			logging.info("Hub: %s" % hub)
 			subscription.hub = hub
 			subscription.put()
+			
 			# Now that we have the hub subscribe to it. SPEC 6.1
 			# Sync subscription because I would like to let the user know that it is ok straight away.
 			#payload = urllib.urlencode(
@@ -210,6 +218,7 @@ class CreateSubscriptionHandler(webapp.RequestHandler):
 			payload = "hub.mode=subscribe&hub.callback=http://amplifriend-app.appspot.com/subscription/%s&hub.topic=%s&hub.verify=sync&hub.verify_token=Something" % (subscription.key().name(), urllib.quote(subscription_url))
 			
 			logging.info("Payload %s" % payload)
+			
 			subscribe = urlfetch.fetch(subscription.hub,
 				payload = payload,
 				method = "post"

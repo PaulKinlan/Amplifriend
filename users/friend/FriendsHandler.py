@@ -23,4 +23,4 @@ class FriendsHandler(webapp.RequestHandler):
 		
 		friends = model.Friends.GetFriends(user, offset = offset)
 		
-		self.response.out.write(templates.RenderThemeTemplate("friends.tmpl", { "friends" : friends }))
+		self.response.out.write(templates.RenderThemeTemplate("friends.tmpl", { "friends" : friends, "user": user }))
