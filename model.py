@@ -190,6 +190,8 @@ class Service(BaseModel):
 	Each Subscription a user is associated with a Service.  A service takes how a URL is parsed.
 	
 	For instance Flickr will take a flickr username (N123123123@01) and map that to a URL.
+	
+	Services are attached to Subscriptions so that we know how to parse the incomming data and which URL to call.
 	"""
 	name = db.StringProperty() # A friendly name
 	parser = db.StringProperty() # The python module that will construct the URL from the value supplied the URL and maybe some other stuff
@@ -269,8 +271,6 @@ class SubscriptionOwners(BaseModel):
 				key_name = "sub_owner_%s" % hashlib.sha1(subscription.link).hexdigest(),
 				parent = subscription
 			 )
-			
-
 	
 	
 class SubscriptionReaders(BaseModel):

@@ -14,12 +14,13 @@ class CreateUserEmailHandler(webapp.RequestHandler):
 		"""
 		Send an email with details about accounts.
 		"""
-		user = self.request.get("email")
+		email = self.request.get("email")
 		
+		user_obj = model.User.GetByEmail(email)
 		
-		if mail.is_email_valid(user.email):
+		if mail.is_email_valid(user_obj.email):
 		
-			text_output = templates.RenderThemeTemplate("newuser_plain.tmpl", { "user" : user })
-			html_output = templates.RenderThemeTemplate("newuser_html.tmpl",  { "user" : user })
+			text_output = templates.RenderThemeTemplate("newuser_plain.tmpl", { "user" : user_obj })
+			html_output = templates.RenderThemeTemplate("newuser_html.tmpl",  { "user" : user_obj })
 		
-			mail.send_mail("paul.kinlan@gmail.com", user.email, "Your new account on AmpliFriend", body = text_output, html = html_output)
+			mail.send_mail("paul.kinlan@gmail.com", user_obj.email, "Your new account on AmpliFriend", body = text_output, html = html_output)
