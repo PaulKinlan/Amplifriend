@@ -403,7 +403,7 @@ class Session(BaseModel):
 	
 	@staticmethod
 	def ExpireSessionsOlderThan(time):
-		keys = db.Query(Session, keys_only = True).filter("last_accessed_on <", time)
+		keys = db.Query(Session, keys_only = True).filter("last_accessed_on <", time).fetch(100)
 		db.delete([key for key in keys ])
 
 	@staticmethod

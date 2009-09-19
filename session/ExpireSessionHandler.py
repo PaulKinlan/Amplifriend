@@ -9,14 +9,12 @@ class ExpireSessionHandler(webapp.RequestHandler):
 		"""
 		Log all the old sessions out.
 		"""
-		sessions = model.Session.ExpireSessionsOlderThan(datetime.datetime.now() - datetime.timedelta(minutes = 30))
-		logging.info("Deleting Sessions")
-		db.delete(sessions)
+		model.Session.ExpireSessionsOlderThan(datetime.datetime.now() - datetime.timedelta(minutes = 30))
+	
 	
 	def post(self):
 		"""
 		Log all the old sessions out.
 		"""
-		sessions = model.Session.ExpireSessionsOlderThan(datetime.datetime.now() - datetime.timedelta(minutes = 30))
+		model.Session.ExpireSessionsOlderThan(datetime.datetime.now() - datetime.timedelta(minutes = 30))
 		logging.info("Deleting Sessions")
-		db.delete(sessions)
