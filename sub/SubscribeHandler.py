@@ -152,6 +152,17 @@ class SubscribeHandler(webapp.RequestHandler):
 					source_link = entry.source.link
 				else:
 					source_link = "Unknown"
+			elif hasattr(entry, 'source') == False:
+				# The entry has no source  It is probably RSS
+				content = entry.get('description', '')
+				title = entry.get('title', '')
+				link = entry.get('link', '')
+				
+				source_title = title
+				source_link = link
+				
+				entry_id = (entry.get('id', '') or link or title or content)
+				
 			else:
 				content = entry.get('description', '')
 				title = entry.get('title', '')

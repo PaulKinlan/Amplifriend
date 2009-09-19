@@ -2,6 +2,7 @@ from google.appengine.ext import webapp
 
 import webdecorators
 import datetime
+import model
 
 class ExpireSessionHandler(webapp.RequestHandler):
 	def get(self):
